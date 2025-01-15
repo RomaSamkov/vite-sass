@@ -1,24 +1,20 @@
+@use "../utils/mixin";
+@use "../utils//variables" as v;
+// @use "../utils" as fw;
+
 .badge {
-    display: inline-block;
-    text-align: center;
-    min-width: 96px;
-    padding: 4px 8px;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 0.07px;
-    color: #ffffff;
-    border-radius: 20px;
+  @include mixin.badge-base;
+  color: v.$badge-cl;
 }
 
 .badge-completed {
-    background-color: #a461d8;
+  background-color: v.$completed;
 }
 
 .badge-ended {
-    background-color: #fc5a5a;
+  background-color: v.$ended;
 }
 
 .badge-active {
-    background-color: #82c43c;
+  background-color: v.$active;
 }
